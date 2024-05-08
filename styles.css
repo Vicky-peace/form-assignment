@@ -1,9 +1,16 @@
-body{
-    font-family: Arial, sans-serif;
+*{
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #1b1d1d;
+}
+
+body{
+    height: 100vh;
+    justify-self: center;
+    align-items: center;
+    background: linear-gradient(135deg, #71b7e6, #71b7e6, #9b59b6);
+    padding: 10px;
 }
 
 h1{
@@ -11,9 +18,30 @@ h1{
     color: #fff;
 }
 .container{
-   width: 50%;
+   max-width: 700px;
+   width: 100%;
+   background: #fff;
    margin: 0 auto;
+   border-radius: 10px;
+   padding: 25px 30px;
 }
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 15px;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: #9b59b6;
+}
+
+
 .form-group{
     margin-bottom: 20px;
     color: #fff;
@@ -22,6 +50,7 @@ h1{
 label{
     display: block;
     margin-bottom: 5px;
+    color: rgb(19, 18, 18);
 }
 input[type="text"],
 input[type="email"],
@@ -45,12 +74,28 @@ input[type="reset"] {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
+    background-color: #21222B;
     color: white;
     cursor: pointer;
 }
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #45a049;
+    background-color: #21222B;
+    font-weight: bold;
+}
+
+.radio{
+    display: flex;
+    padding: 10px;
+    margin: 15px;
+}
+.radio label{
+    margin: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
 }
